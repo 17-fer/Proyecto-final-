@@ -97,14 +97,6 @@ main section {
     padding: 60px 20px;
 }
 
-/* Multimedia (Video) */
-.video-container {
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 /* --- SECCIÓN PRODUCTOS (Flexbox Responsivo) --- */
 .productos-container {
     display: flex;
@@ -373,4 +365,5 @@ footer {
     background-color: var(--color-celeste-pastel);
     color: var(--color-texto-oscuro);
     margin-top: 30px;
+
 }
