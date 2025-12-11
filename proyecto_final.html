@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Catálogo de adorables amigurumis tejidos a mano en colores pastel. ¡Ideales para regalar!" />
+  <meta name="keywords" content="amigurumi, crochet, tejidos, manualidades, regalos, peluches, lila, celeste" />
+  <meta name="author" content="Tu Nombre" />
+  <title>Catálogo de Amigurumis Pastel - Tejidos a Mano</title>
+  
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <h1>Catálogo de Amigurumis</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#catalogo">Productos</a></li>
+        <li><a href="#reseñas">Reseñas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="cart-icon" id="open-cart-btn" aria-label="Abrir Carrito de Compras">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-counter" class="cart-counter">0</span>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <h2>Bienvenidos al Mundo Pastel</h2>
+      <p>Descubrí nuestros adorables amigurumis tejidos a mano. ¡Ideales para regalar o decorar!</p>
+      </div>
+       </section>
+
+    <section id="catalogo">
+      <h2>Productos</h2>
+      <div class="productos-container" id="productos-container">
+        <div class="producto" data-id="1">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuVrgBLG4geZeZZV0RYm3WpMakijw2shPKjg&s" alt="Conejito de color pastel" />
+          <h3>Conejito</h3>
+          <p>Un adorable conejito tejido a mano con hilo suave.</p>
+          <p class="precio" data-price="9000">$9000</p>
+          <button class="add-to-cart-btn" data-product-id="1">Agregar al carrito</button>
+        </div>
+        <div class="producto" data-id="2">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-0pJADPbmxpQv6OvgPzhQvDpmRlBj3HehNg&s" alt="Osito de peluche en color lila" />
+          <h3>Osito</h3>
+          <p>Osito de peluche tejido a crochet con detalles delicados.</p>
+          <p class="precio" data-price="9000">$9000</p>
+          <button class="add-to-cart-btn" data-product-id="2">Agregar al carrito</button>
+        </div>
+        <div class="producto" data-id="3">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFkY7FTChkobvfkH74j4lPj5-lWUuQ33hehA&s" alt="Unicornio mágico con melena celeste" />
+          <h3>Unicornio</h3>
+          <p>Unicornio mágico tejido a mano con colores brillantes.</p>
+          <p class="precio" data-price="9000">$9000</p>
+          <button class="add-to-cart-btn" data-product-id="3">Agregar al carrito</button>
+        </div>
+        </div>
+    </section>
+
+    <section id="reseñas">
+      <h2>Reseñas de Clientes</h2>
+      <div class="reseñas-grid">
+        <div class="reseña" tabindex="0" role="review">⭐️⭐️⭐️⭐️⭐️ "Hermosos productos, excelente calidad. Los colores pastel son preciosos."</div>
+        <div class="reseña" tabindex="0" role="review">⭐️⭐️⭐️⭐️ "Llegó rápido y en perfecto estado. El sapito es adorable."</div>
+        <div class="reseña" tabindex="0" role="review">⭐️⭐️⭐️⭐️⭐️ "¡A mi hija le encantó el unicornio! La atención fue de diez."</div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form id="contact-form" action="https://formspree.io/f/mzzjwnly" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required aria-required="true" />
+        <p class="error-message" id="error-nombre"></p>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required aria-required="true" />
+        <p class="error-message" id="error-email"></p>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" required aria-required="true"></textarea>    
+        <p class="error-message" id="error-mensaje"></p>
+        <button type="submit" id="submit-btn">Enviar</button>
+        <p id="form-status" class="form-status"></p>
+      </form>
+    </section>
+  </main>
+  
+  <aside id="cart-sidebar" class="cart-sidebar">
+      <h3>🛒 Mi Carrito</h3>
+      <div id="cart-items-list">
+          <p class="empty-cart-msg">Tu carrito está vacío.</p>
+      </div>
+      <div class="cart-summary">
+          <strong>Total: $<span id="cart-total">0.00</span></strong>
+      </div>
+      <button id="close-cart-btn">Cerrar</button>
+      <button id="clear-cart-btn" class="clear-btn">Vaciar Carrito</button>
+  </aside>
+
+  <footer>
+    <p>&copy; 2024 Catálogo de Amigurumis. Todos los derechos reservados.</p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
